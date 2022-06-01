@@ -21,7 +21,7 @@ class SimpleFacerec:
         # Carrega as imagens
         images_path = glob.glob(os.path.join(images_path, "*.*"))
 
-        print("{} Encodando imagens encontradas.".format(len(images_path)))
+        #print("{} Encodando imagens encontradas.".format(len(images_path)))
 
         # Armazena o encoding e o nome
         for img_path in images_path:
@@ -37,7 +37,7 @@ class SimpleFacerec:
             # Armazena o nome e o nome do arquivo
             self.known_face_encodings.append(img_encoding)
             self.known_face_names.append(filename)
-        print("Encodando imagens")
+        #print("Encodando imagens")
 
     def detect_known_faces(self, frame):
         small_frame = cv2.resize(frame, (0, 0), fx=self.frame_resizing, fy=self.frame_resizing)
@@ -50,7 +50,7 @@ class SimpleFacerec:
         for face_encoding in face_encodings:
 
             matches = face_recognition.compare_faces(self.known_face_encodings, face_encoding)
-            name = "Não conhecido"
+            name = "Nao conhecido"
 
             face_distances = face_recognition.face_distance(self.known_face_encodings, face_encoding)
             best_match_index = np.argmin(face_distances)

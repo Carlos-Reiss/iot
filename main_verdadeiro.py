@@ -1,11 +1,19 @@
 from time import sleep
+from video import is_face_recognized
+
 
 
 while True:
-
-    option = input("Digite 1 para campainha e 2 para reconhecimento facial: ")
+    print("==============================================================")
+    option = input("[?] Digite 1 para reconhecimento facial e 2 para campainha: ")
+    print("==============================================================")
+    print()
 
     if option == "1":
-        print("a")
+        print("[*] Iniciando reconhecimento facial.")
+        is_face_recognized()
     elif option == "2":
-        print ("Inicio do reconhecimento facial")
+        print("[*] Iniciando o alerta da campainha.")
+    else:
+        print("[!] Opção não encontrada.")
+    print()
