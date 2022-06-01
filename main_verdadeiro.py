@@ -15,7 +15,7 @@ while True:
         is_face_recognized()
     elif option == "2":
         print("[*] Iniciando o alerta da campainha.")
-        sendSMS("Estão tocando a campainha!!")
+        sendSMS("Estão tocando a campainha!!","soneblix")
         print("[*] SMS Enviado!")
     else:
         print("[!] Opção não encontrada.")
