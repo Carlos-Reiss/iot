@@ -1,6 +1,7 @@
 from time import sleep
 from video import is_face_recognized
 from sendsms import sendSMS
+from sendsms import send_telegram_message
 
 
 
@@ -15,8 +16,8 @@ while True:
         is_face_recognized()
     elif option == "2":
         print("[*] Iniciando o alerta da campainha.")
-        sendSMS("Estão tocando a campainha!!","soneblix")
-        print("[*] SMS Enviado!")
+        send_telegram_message("Estão tocando a campainha!!")
+        print("[*] Mensagem Enviada!")
     else:
         print("[!] Opção não encontrada.")
     print()
