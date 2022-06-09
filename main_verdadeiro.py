@@ -1,6 +1,5 @@
 from time import sleep
 from video import is_face_recognized
-from sendsms import sendSMS
 from sendsms import send_telegram_message
 
 
